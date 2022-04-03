@@ -1,0 +1,105 @@
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: url(Pizza.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 4fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Navigation Navigation Navigation Navigation"
+    "Main Main Main Aside"
+    "Footer Footer Footer Footer";
+  row-gap: 10px;
+}
+.title-green{
+  color: rgb(36, 219, 36);
+}
+.title-red{
+  color: rgb(243, 66, 66);
+}
+
+/* Links modifizieren */
+.Navigation a:link{
+  color: white;
+  text-decoration: none;
+}
+.Navigation a:visited{
+  color: white;
+  text-decoration: none;
+}
+.Navigation a:hover{
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+}
+.Main a:link{
+  color: rgb(171, 196, 241);
+}
+.Main a:hover{
+  color: white;
+}
+.Main a:visited{
+  color: rgb(171, 196, 241);
+}
+
+.Header {
+  grid-area: Header;
+  background-color: gray;
+  color: white;
+  font-size: 50px;
+  padding: 10px;
+}
+
+.Navigation {
+  grid-area: Navigation;
+  background-color:deepskyblue;
+  color: white;
+  padding: 10px;
+ }
+
+.Footer {
+  grid-area: Footer;
+  background-color: gray;
+  color: gainsboro;
+}
+.Footer ul{
+  list-style-type: none;
+}
+
+.Main {
+   grid-area: Main;
+   background-color: darkgray;
+   color: white;
+   padding: 10px;
+}
+.Main img{
+  width: 300px;
+  height: auto;
+  padding-top: 50px;
+}
+.Aside { 
+  grid-area: Aside;
+  background-color: rgb(228, 200, 43);
+  color: white;
+  padding: 10px;
+}
+
+@media screen and (max-width: 480px){
+  .container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 4fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header Header Header"
+      "Navigation Navigation Navigation Navigation"
+      "Main Main Main Main"
+      "Aside Aside Aside Aside"
+      "Footer Footer Footer Footer";
+    row-gap: 10px;
+  }
+}

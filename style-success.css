@@ -1,0 +1,78 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: url(Pizza.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 4fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Navigation Navigation Navigation Navigation"
+    "Main Main Main Main"
+    "Footer Footer Footer Footer";
+  gap: 10px;
+}
+.title-green{
+  color: rgb(36, 219, 36);
+}
+.title-red{
+  color: rgb(243, 66, 66);
+}
+/* Links modifizieren */
+.Navigation a:link{
+    color: white;
+    text-decoration: none;
+}
+.Navigation a:visited{
+  color: white;
+  text-decoration: none;
+}
+.Navigation a:hover{
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+}
+.Header {
+  grid-area: Header;
+  background-color: gray;
+  color: white;
+  font-size: 50px;
+  padding: 10px;
+}
+  
+.Navigation {
+  grid-area: Navigation;
+  background-color:deepskyblue;
+  color: white;
+  padding: 10px;
+}
+  
+.Footer {
+  grid-area: Footer;
+  background-color: gray;
+  color: gainsboro;
+}
+.Footer ul{
+  list-style-type: none;
+}
+
+.Success{
+  grid-area: Main;
+  background-color: darkgray;
+  color: white;
+  padding: 10px; 
+  background: url(gallery3-delivery-guy.png) no-repeat;
+  background-size: cover;
+  background-color: rgba(128, 128, 128, 0.582);
+
+}
+h1 {
+  color: greenyellow;
+}
+/*
+@media screen and (max-width: 480px){
+  nicht gebraucht da die elemente bereits gut angeordnet sind
+}*/
